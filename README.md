@@ -41,7 +41,7 @@ Recommendation is a different enough problem from classification and regression 
 ### Content-based filtering
 
 Content-based recommender analyze item metadata and find
-regularities in the content. They rely on the features of users and items for predictions. [[1]](#1).
+regularities in the content. They rely on the features of users and items for predictions. [[1]](#1)
 
 #### Algorithms
 ### Hybrid approaches
