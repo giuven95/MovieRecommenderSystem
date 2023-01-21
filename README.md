@@ -17,6 +17,16 @@ An automatic movie recommendations system project
 
 ### Peculiarities of the recommendation problem
 
+* **Novelty should be taken into account**
+
+* **Diversity should be taken into account**
+
+* **Serendipity should be taken into account**
+
+* **Often, recommender systems cannot be fully offline**
+
+* **Production systems should be mindful of presentation bias**
+
 ## Main approaches for creating recommender systems
 ### Collaborative filtering
 #### Algorithms
