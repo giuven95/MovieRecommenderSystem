@@ -14,6 +14,8 @@ An automatic movie recommendations system project
 
 ## Problem formulation
 
+### Peculiarities of the recommendation problem
+
 ## Main approaches for creating recommender systems
 ### Collaborative filtering
 #### Algorithms
@@ -21,6 +23,8 @@ An automatic movie recommendations system project
 #### Algorithms
 ### Hybrid approaches
 #### Techniques
+
+## Performance metrics
 
 ## Project scope
 
