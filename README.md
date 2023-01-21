@@ -19,7 +19,7 @@ TODO
 
 ### Peculiarities of the recommendation problem
 
-Recommendation is different enough from classification to have its own challenges.
+Recommendation is a different enough problem from classification to have its own challenges.
 
 * **Novelty should sometimes be taken into account**
 
