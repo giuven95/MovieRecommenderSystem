@@ -40,7 +40,7 @@ Recommendation is a different enough problem from classification and regression 
 #### Algorithms
 ### Content-based filtering
 
-Content-based recommender analyze item metadata and find
+Content-based recommender systems analyze item metadata, like movie names, movie descriptions and tags, and find
 regularities in the content. They rely on the features of users and items for predictions. [[1]](#1)
 
 #### Algorithms
