@@ -27,3 +27,4 @@ The following datasets were used for the project:
 ## Useful links
 
 * [Youtube playlist about recommender systems](https://www.youtube.com/playlist?list=PL3ZVX5cUMdLbiFgitZszhnMUZHDDEL0rS)
+  [- Problem formulation (Andrew Ng) ](https://www.youtube.com/watch?v=giIXNoiqO_U)
