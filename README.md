@@ -29,9 +29,9 @@ Recommendation is a different enough problem from classification and regression 
 
 * **Often, recommender systems cannot be fully offline**
 
-* **Production recommender systems should be mindful of presentation bias**
+* **In production environments, recommender systems should be mindful of presentation bias**
 
-* **Production recommender systems should be robust**
+* **In production environments, recommender systems should be robust**
 
 * **The future is not always like the past**
 
