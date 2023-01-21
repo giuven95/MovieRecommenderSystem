@@ -19,7 +19,9 @@ TODO
 
 ### Peculiarities of the recommendation problem
 
-* **Novelty should be taken into account**
+Recommendation is different enough from classification to have its own challenges.
+
+* **Novelty should sometimes be taken into account**
 
 * **Diversity should be taken into account**
 
@@ -27,7 +29,9 @@ TODO
 
 * **Often, recommender systems cannot be fully offline**
 
-* **Production systems should be mindful of presentation bias**
+* **Production recommender systems should be mindful of presentation bias**
+
+* **Production recommender systems should be robust**
 
 * **The future is not always like the past**
 
