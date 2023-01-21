@@ -41,14 +41,19 @@ Recommendation is a different enough problem from classification and regression 
 Collaborative filtering systems use a database of preferences for items
 by users in order to predict additional items a new user might like. They do not rely on the features of users and items for predictions. [[1]](#1)
 
-#### Algorithms
+#### Techniques
+
 ### Content-based filtering
 
 Content-based recommender systems analyze item metadata, like movie names, movie descriptions and tags, and find
 regularities in the content. They rely on the features of users and items for predictions. [[1]](#1)
 
-#### Algorithms
+#### Techniques
+
 ### Hybrid approaches
+
+Hybrid approaches combine content-filtering techniques with those based on collaborative filtering. [[2]](#2)
+
 #### Techniques
 
 ## Performance metrics
@@ -70,6 +75,17 @@ The following datasets were used for the project:
 Xiaoyuan Su and Taghi M. Khoshgoftaar,
 "A Survey of Collaborative Filtering Techniques",
 https://downloads.hindawi.com/archive/2009/421425.pdf
+
+<a id="2">[2]</a> 
+
+Ana Belén Barragáns-Martínez, Enrique Costa-Montenegro, Juan C. Burguillo, Marta Rey-López, Fernando A. Mikic-Fonte, Ana Peleteiro,
+A hybrid content-based and item-based collaborative filtering approach to recommend TV programs enhanced with singular value decomposition,
+Information Sciences,
+Volume 180, Issue 22,
+2010,
+Pages 4290-4311,
+ISSN 0020-0255,
+https://doi.org/10.1016/j.ins.2010.07.024.
 
 
 ## Useful links
