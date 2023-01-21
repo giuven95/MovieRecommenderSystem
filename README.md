@@ -39,6 +39,10 @@ Recommendation is a different enough problem from classification and regression 
 ### Collaborative filtering
 #### Algorithms
 ### Content-based filtering
+
+Content-based recommender analyze item metadata and find
+regularities in the content. They rely on the features of users and items for predictions. [[1]](#1).
+
 #### Algorithms
 ### Hybrid approaches
 #### Techniques
@@ -56,6 +60,11 @@ The following technologies were used for the project:
 The following datasets were used for the project:
 
 ## References
+
+<a id="1">[1]</a> 
+Xiaoyuan Su and Taghi M. Khoshgoftaar
+A Survey of Collaborative Filtering Techniques
+https://downloads.hindawi.com/archive/2009/421425.pdf
 
 ## Useful links
 
