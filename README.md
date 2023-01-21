@@ -73,7 +73,7 @@ The following datasets were used for the project:
 
 * [Building Production Recommender Systems - Maciej Kula - WEB2DAY 2017](https://www.youtube.com/watch?v=CLNFmm6Lj_I)
 
-* [Neural Networks for Recommender Systems](https://www.youtube.com/watch?v=ZkBQ6YA9E40)
+* [Neural Networks for Recommender Systems - Maciej Kula - PyData 2017](https://www.youtube.com/watch?v=ZkBQ6YA9E40)
 
 * [Best practices for recommender systems, GitHub repo by Microsoft](https://github.com/microsoft/recommenders)
 
