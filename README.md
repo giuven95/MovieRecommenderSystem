@@ -66,7 +66,7 @@ regularities in the content. They rely on the features of users and items for pr
 
 ### Hybrid approaches
 
-Hybrid approaches combine content-filtering techniques with those based on collaborative filtering. [[2]](#2)
+Hybrid approaches combine content-based filtering techniques with those based on collaborative filtering. [[2]](#2)
 
 #### Techniques
 
