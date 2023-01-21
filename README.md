@@ -36,6 +36,8 @@ The following datasets were used for the project:
     - [Content based recommendations (Andrew Ng)](https://www.youtube.com/watch?v=9siFuMMHNIA)
     
     - [Collaborative filtering (Andrew Ng)](https://www.youtube.com/watch?v=9AP-DgFBNP4)
+    
+    - [Collaborative filtering algorithm (Andew Ng)](https://www.youtube.com/watch?v=YW2b8La2ICo)
 
 
 * [Best practices for recommender systems, GitHub repo by Microsoft](https://github.com/microsoft/recommenders)
