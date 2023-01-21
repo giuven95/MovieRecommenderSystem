@@ -12,6 +12,7 @@ An automatic movie recommendations system project
 * 2023/02/21 13:20 - Created section "Problem formulation"
 * 2023/02/21 13:50 - Added more sections
 * 2023/02/21 14:40 - Added more sections
+* 2023/02/21 20:30 - Added React, Flask, MongoDB, Docker Compose inside "app" folder
 
 ## Problem formulation
 
