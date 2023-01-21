@@ -23,31 +23,31 @@ Recommendation is a different enough problem from classification and regression 
 
 * **Novelty should sometimes be taken into account**
 
-TODO
+  TODO
 
 * **Diversity should be taken into account**
 
-TODO
+  TODO
 
 * **Serendipity should be taken into account**
 
-TODO
+  TODO
 
 * **Often, recommender systems cannot be fully offline**
 
-TODO
+  TODO
 
 * **In production environments, recommender systems should be mindful of presentation bias**
 
-TODO
+  TODO
 
 * **In production environments, recommender systems should be robust**
 
-TODO
+  TODO
 
 * **The future is not always like the past**
 
-TODO
+  TODO
 
 ## Main approaches for creating recommender systems
 ### Collaborative filtering
