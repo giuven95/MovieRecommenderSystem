@@ -27,6 +27,8 @@ An automatic movie recommendations system project
 
 * **Production systems should be mindful of presentation bias**
 
+* **The future is not always like the past**
+
 ## Main approaches for creating recommender systems
 ### Collaborative filtering
 #### Algorithms
