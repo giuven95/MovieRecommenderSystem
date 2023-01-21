@@ -15,6 +15,8 @@ An automatic movie recommendations system project
 
 ## Problem formulation
 
+TODO
+
 ### Peculiarities of the recommendation problem
 
 * **Novelty should be taken into account**
