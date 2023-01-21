@@ -44,4 +44,4 @@ The following datasets were used for the project:
 
 * [Best practices for recommender systems, GitHub repo by Microsoft](https://github.com/microsoft/recommenders)
 
-* [List of movies every hacker should watch, GitHub repo by k4m4]https://github.com/k4m4/movies-for-hackers)
+* [List of movies every hacker should watch, GitHub repo by k4m4](https://github.com/k4m4/movies-for-hackers)
