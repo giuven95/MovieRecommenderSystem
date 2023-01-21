@@ -39,7 +39,7 @@ The following datasets were used for the project:
     
     - [Collaborative filtering algorithm (Andew Ng)](https://www.youtube.com/watch?v=YW2b8La2ICo)
     
-    - [Hybrid recommender systems in Python (Maciej Kula)](https://www.youtube.com/watch?v=EgE0DUrYmo8)
+    - [Hybrid recommender systems in Python (Maciej Kula, PyData 2016)](https://www.youtube.com/watch?v=EgE0DUrYmo8)
 
 
 * [Best practices for recommender systems, GitHub repo by Microsoft](https://github.com/microsoft/recommenders)
