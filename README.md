@@ -1,6 +1,8 @@
 # MovieRecommenderSystem
 An automatic movie recommendations system project
 
+## Overview
+
 ## Log
 * 2023/01/21 11:50 - Created the project
 * 2023/01/21 11:55 - Created section "Main approaches for creating recommender systems"
@@ -18,6 +20,10 @@ An automatic movie recommendations system project
 #### Algorithms
 ### Hybrid approaches
 #### Techniques
+
+## Project scope
+
+## Prototypes and implementation
 
 ## Technologies
 The following technologies were used for the project:
