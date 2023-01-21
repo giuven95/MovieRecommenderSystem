@@ -39,7 +39,7 @@ Recommendation is a different enough problem from classification and regression 
 ### Collaborative filtering
 
 Collaborative filtering systems use a database of preferences for items
-by users in order to predict additional items a new user might like. They do not rely on the features of users and items for predictions [[1]](#1)
+by users in order to predict additional items a new user might like. They do not rely on the features of users and items for predictions. [[1]](#1)
 
 #### Algorithms
 ### Content-based filtering
