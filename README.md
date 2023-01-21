@@ -72,7 +72,7 @@ Hybrid approaches combine content-based filtering techniques with those based on
 
 ## Performance metrics
 
-## Project scope
+## Project scope and approach
 
 ## Prototypes and implementation
 
