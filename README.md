@@ -29,6 +29,8 @@ The following datasets were used for the project:
 * [Youtube playlist about recommender systems](https://www.youtube.com/playlist?list=PL3ZVX5cUMdLbiFgitZszhnMUZHDDEL0rS)
 
     - [Problem formulation (Andrew Ng) ](https://www.youtube.com/watch?v=giIXNoiqO_U)
+    - 
+    - [Content based recommendations (Andrew Ng)](https://www.youtube.com/watch?v=9siFuMMHNIA)
 
 
 * [Best practices for recommender systems, GitHub repo by Microsoft](https://github.com/microsoft/recommenders)
