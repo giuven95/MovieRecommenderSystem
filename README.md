@@ -79,3 +79,4 @@ The following datasets were used for the project:
 
 * [List of movies every hacker should watch, GitHub repo by k4m4](https://github.com/k4m4/movies-for-hackers)
 
+* [Letterboxd movie recommendations project, GitHub repo by Sam Learner](https://github.com/sdl60660/letterboxd_recommendations)
