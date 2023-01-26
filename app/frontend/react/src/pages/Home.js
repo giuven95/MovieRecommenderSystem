@@ -39,12 +39,12 @@ function Home() {
               {...register("name")}
             />
           </div>
-          <div className="AppFormGroup">
-            <button type="submit">
+          {canSubmit? <div className="AppFormGroup">
+            <button className="AppButton" type="submit">
               <PlayArrowIcon />
               Submit
             </button>
-          </div>
+          </div> : ""}
         </form>
       </div>
       <div className="AppContainer">

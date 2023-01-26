@@ -57,7 +57,7 @@ def get_job_response(job_id):
 def stop_job(job_id):
     my_mongo_connect()
     job_doc = Job.objects(job_id=job_id).first()
-    if not job:
+    if not job_doc:
         return jsonify({"error": "Job not found"}), 404
     job_doc.stopped = True
     job_doc.save()

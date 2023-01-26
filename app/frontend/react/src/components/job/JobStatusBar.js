@@ -14,7 +14,7 @@ const JobStatusBar = () => {
 
   function handleStopClick() {
     stopJob();
-    fetch(`/stop/${jobId}`, { method: 'POST' })
+    fetch(BACKEND_API_URL + `/stop/${jobId}`, { method: 'POST' })
       .then(response => response.json())
       .then(data => {
         console.log(data);
@@ -49,7 +49,7 @@ const JobStatusBar = () => {
                 <strong>Status: </strong>{STATUS_TO_STRING[jobStatus]}
             </p>
             {(canSubmit) ? "" : <div className="AppFormGroup">
-              <button className="AppStopButton" type="button" onClick={handleStopClick}>
+              <button className="AppButton AppStopButton" type="button" onClick={handleStopClick}>
                 <StopIcon />
                 Stop
               </button>

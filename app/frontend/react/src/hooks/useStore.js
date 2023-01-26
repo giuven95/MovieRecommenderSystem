@@ -18,9 +18,6 @@ const useStore = create(
         })),
       stopJob: (id) =>
         set(produce(draft => {
-            draft.jobId = null;
-            draft.jobStatus = null;
-            draft.response = null;
             draft.canSubmit = true;
         })),
       setJobStatus: (status) =>
