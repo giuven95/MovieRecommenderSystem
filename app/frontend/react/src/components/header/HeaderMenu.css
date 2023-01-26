@@ -1,0 +1,17 @@
+.HeaderMenuText {
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+.HeaderMenu .MuiPaper-root {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .HeaderMenuText {
+        display: none;
+    }
+}

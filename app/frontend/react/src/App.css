@@ -1,0 +1,42 @@
+.App {
+  background-color: black;
+  color: white;
+}
+
+.AppContainer {
+  background-color: #eee;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: #eee 1px 1px 12px 1px;
+  padding: 10px;
+}
+
+.AppPage {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.AppFormGroup {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.AppForm button {
+  padding: 10px;
+  border: unset;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  width: 80px;
+}
+
+.AppForm input {
+  min-height: 30px;
+  border-radius: 3px;
+  border: 1px #333 solid;
+  margin-top: 5px;
+}

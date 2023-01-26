@@ -1,0 +1,7 @@
+flask
+gunicorn==20.0.4
+mongoengine
+rq
+redis
+flask_cors
+uuid

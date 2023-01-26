@@ -1,0 +1,57 @@
+.Footer {
+    height: 38.5%;
+    width: 100%;
+    background-color: #eee;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    max-width: calc(100vw - 30px);
+    box-shadow: #eee 1px 1px 12px 1px;
+}
+
+.FooterTop, .FooterBottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%; 
+}
+
+.Footer svg {
+    width: 18.5px;
+    margin: 2.5px;
+    margin-top: 6.5px;
+    color: black;
+}
+
+.Footer img {
+    width: 32px;
+    height: auto;
+    margin-left: 8px;
+    border-radius: 40%;
+}
+
+.Footer img, .Footer span {
+    margin-right: 12px;
+}
+
+.Footer span {
+    font-size: 14px;
+}
+
+.Footer .FooterThanks {
+    font-size: 11px;
+    margin-left: 11px;
+}
+
+.FooterThanks a {
+    color: black;
+    text-decoration: underline;
+}
+
+.FooterBottom {
+    padding-top: 20px;
+}

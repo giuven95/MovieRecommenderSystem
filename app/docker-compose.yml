@@ -1,16 +1,13 @@
 version: '3.7'
 
 services:
+
     client:
         build:
             context: ./frontend
             dockerfile: Dockerfile
-        tty: true
         ports:
             - "3000:3000"
-        volumes: 
-            - ./frontend:/app
-            - /app/node_modules
         networks:
             - frontend
 
@@ -25,27 +22,62 @@ services:
             MONGO_INITDB_DATABASE: webapp
             MONGODB_DATA_DIR: /data/db
         volumes:
-        - mongodbdata:/data/db
+            - mongodbdata:/data/db
         networks:
-        - backend
+            - backend
 
     api:
         build: 
-            context: ./backend
+            context: ./backend/flask
             dockerfile: Dockerfile
-        command: gunicorn --bind 0.0.0.0:5000 app:app
         ports:
-            - "5000:5000"
+            - "5000:80"
+        environment:
+            PYTHONUNBUFFERED: 1
+            MONGODB_HOST: mongodb
+            MONGODB_USERNAME: ${MONGO_API_USERNAME}
+            MONGODB_PASSWORD: ${MONGO_API_PASSWORD}
+            REDIS_HOST: cache
+            REDIS_PASSWORD: ${REDIS_PASSWORD}
+            REDIS_PORT: 6379
+        volumes:
+            - type: bind
+              source: ./backend/shared_modules
+              target: /app/shared_modules
+        depends_on: 
+            - mongodb
+            - cache
+        networks:
+            - backend
+
+    worker:
+        build: 
+            context: ./backend/worker
+            dockerfile: Dockerfile
         environment:
             MONGODB_HOST: mongodb
             MONGODB_USERNAME: ${MONGO_API_USERNAME}
             MONGODB_PASSWORD: ${MONGO_API_PASSWORD}
+            REDIS_HOST: cache
+            REDIS_PASSWORD: ${REDIS_PASSWORD}
+            REDIS_PORT: 6379
         volumes:
-            - appdata:/var/www/
+            - type: bind
+              source: ./backend/shared_modules
+              target: /app/shared_modules
         depends_on: 
             - mongodb
+            - cache
         networks:
-            - frontend
+            - backend
+
+    cache:
+        image: redis:7-alpine
+        restart: always
+        command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASSWORD}
+        volumes:
+            - cache:/data
+        networks:
             - backend
 
 networks:
@@ -57,4 +89,6 @@ volumes:
     mongodbdata:
         driver: local
     appdata:
+        driver: local
+    cache:
         driver: local

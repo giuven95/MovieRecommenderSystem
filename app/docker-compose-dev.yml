@@ -6,12 +6,8 @@ services:
         build:
             context: ./frontend
             dockerfile: Dockerfile
-        tty: true
         ports:
             - "3000:3000"
-        volumes: 
-            - ./frontend:/app
-            - /app/node_modules
         networks:
             - frontend
 
@@ -21,8 +17,8 @@ services:
         restart: unless-stopped
         command: mongod --auth
         environment:
-            MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
-            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+            MONGO_INITDB_ROOT_USERNAME: ${MONGO_API_USERNAME}
+            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_API_PASSWORD}
             MONGO_INITDB_DATABASE: webapp
             MONGODB_DATA_DIR: /data/db
         volumes:
@@ -49,6 +45,17 @@ services:
             - frontend
             - backend
 
+    cache:
+        image: redis:7-alpine
+        restart: always
+        ports:
+            - "6379:6379"
+        command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASSWORD}
+        volumes:
+            - cache:/data
+        networks:
+            - backend
+
 networks:
     frontend:
         driver: bridge
@@ -58,4 +65,6 @@ volumes:
     mongodbdata:
         driver: local
     appdata:
+        driver: local
+    cache:
         driver: local
