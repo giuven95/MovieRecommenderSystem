@@ -3,6 +3,7 @@ import useStore from '../../hooks/useStore';
 import POLLING_DELAY_MS from '../../constants/POLLING_DELAY_MS';
 import STATUS_TO_STRING from '../../constants/STATUS_TO_STRING';
 import BACKEND_API_URL from "../../constants/BACKEND_API_URL";
+import StopIcon from '@mui/icons-material/Stop';
 
 const JobStatusBar = () => {
   const jobId = useStore(state => state.jobId);
@@ -32,7 +33,13 @@ const JobStatusBar = () => {
             </p>
             <p>
                 <strong>Status: </strong>{STATUS_TO_STRING[jobStatus]}
-            </p></>
+            </p>
+            <div className="AppFormGroup">
+              <button className="AppStopButton" type="button">
+                <StopIcon />
+                Stop
+              </button>
+            </div></>
             ) : (
             <p><strong>No job in progress</strong></p>
         )}

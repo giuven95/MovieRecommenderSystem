@@ -51,3 +51,14 @@ def get_job_response(job_id):
     if not job:
         return jsonify({"error": "Job not found"}), 404
     return jsonify({"response": job.response})
+
+
+@app.route(API_PREFIX + "/stop/<job_id>", methods=["POST"])
+def stop_job(job_id):
+    my_mongo_connect()
+    job_doc = Job.objects(job_id=job_id).first()
+    if not job:
+        return jsonify({"error": "Job not found"}), 404
+    job_doc.stopped = True
+    job_doc.save()
+    return jsonify({"stopped": True})

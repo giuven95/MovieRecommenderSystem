@@ -13,7 +13,7 @@ An automatic movie recommendations system project
 * 2023/02/21 13:50 - Added more sections
 * 2023/02/21 14:40 - Added more sections
 * 2023/02/21 20:30 - Added React, Flask, MongoDB, Docker Compose inside "app" folder
-* 2023/02/26 20:20 - Created job system
+* 2023/02/26 20:20 - Created job system (mockup)
 
 ## Problem formulation
 

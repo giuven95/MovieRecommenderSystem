@@ -27,11 +27,15 @@
 
 .AppForm button {
   padding: 10px;
+  padding-right: 15px;
   border: unset;
   background-color: black;
   color: white;
   cursor: pointer;
-  width: 80px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .AppForm input {
@@ -39,4 +43,8 @@
   border-radius: 3px;
   border: 1px #333 solid;
   margin-top: 5px;
+}
+
+.AppStopButton {
+  background-color: rgb(180, 3, 3);
 }

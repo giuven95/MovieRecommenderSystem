@@ -27,12 +27,14 @@ class Job(Document):
     profile_name = StringField(required=True)
     status = StringField(required=True)
     response = ListField(EmbeddedDocumentField(Suggestion))
+    stopped = BooleanField(default=False)
 
 
 def process_job(job):
     my_mongo_connect()
-    job_doc = Job.objects(job_id=job['id']).first()
     for i, job_status in enumerate(JOB_STATUSES):
+        job_doc = Job.objects(job_id=job['id']).first()
+        if job_doc.stopped: return
         if i == 0: continue
         job_doc.status = job_status
         if i == len(JOB_STATUSES) - 1: 

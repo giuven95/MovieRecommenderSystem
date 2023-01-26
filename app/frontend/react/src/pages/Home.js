@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import useStore from '../hooks/useStore';
 import BACKEND_API_URL from "../constants/BACKEND_API_URL";
 import JobStatusBar from "../components/job/JobStatusBar";
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 function Home() {
   const { register, handleSubmit } = useForm();
@@ -38,7 +39,10 @@ function Home() {
             />
           </div>
           <div className="AppFormGroup">
-            <button type="submit">Submit</button>
+            <button type="submit">
+              <PlayArrowIcon />
+              Submit
+            </button>
           </div>
         </form>
       </div>
