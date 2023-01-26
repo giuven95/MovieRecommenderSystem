@@ -6,16 +6,26 @@ const useStore = create(
   persist(
     (set, get) => ({
       jobId: null,
-      jobStatus: "UNKOWN",
+      canSubmit: true,
+      jobStatus: null,
       response: null,
-      setJobId: (id) =>
+      startJob: (id) =>
         set(produce(draft => {
             draft.jobId = id;
+            draft.jobStatus = "UNKNOWN";
+            draft.response = null;
+            draft.canSubmit = false;
+        })),
+      stopJob: (id) =>
+        set(produce(draft => {
+            draft.jobId = null;
             draft.jobStatus = null;
             draft.response = null;
+            draft.canSubmit = true;
         })),
       setJobStatus: (status) =>
         set(produce(draft => {
+            if (status === "DONE") draft.canSubmit = true;
             draft.jobStatus = status;
         })),
       setResponse: (response) =>

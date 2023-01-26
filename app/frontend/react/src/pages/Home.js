@@ -8,7 +8,8 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 function Home() {
   const { register, handleSubmit } = useForm();
-  const setJobId = useStore(state => state.setJobId);
+  const canSubmit = useStore(state => state.canSubmit);
+  const startJob = useStore(state => state.startJob);
 
   function onSubmit(data) {
     const endpoint = '/request';
@@ -20,7 +21,7 @@ function Home() {
   
     fetch(BACKEND_API_URL + endpoint, options)
       .then((response) => response.json())
-      .then((data) => setJobId(data.id))
+      .then((data) => startJob(data.id))
       .catch((error) => console.error('Error:', error));
   }
 

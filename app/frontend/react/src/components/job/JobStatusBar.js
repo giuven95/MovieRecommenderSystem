@@ -6,9 +6,23 @@ import BACKEND_API_URL from "../../constants/BACKEND_API_URL";
 import StopIcon from '@mui/icons-material/Stop';
 
 const JobStatusBar = () => {
+  const canSubmit = useStore(state => state.canSubmit);
   const jobId = useStore(state => state.jobId);
   const jobStatus = useStore(state => state.jobStatus);
   const setJobStatus = useStore(state => state.setJobStatus);
+  const stopJob = useStore(state => state.stopJob);
+
+  function handleStopClick() {
+    stopJob();
+    fetch(`/stop/${jobId}`, { method: 'POST' })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
 
   useEffect(() => {
     let intervalId = null;
@@ -34,12 +48,13 @@ const JobStatusBar = () => {
             <p>
                 <strong>Status: </strong>{STATUS_TO_STRING[jobStatus]}
             </p>
-            <div className="AppFormGroup">
-              <button className="AppStopButton" type="button">
+            {(canSubmit) ? "" : <div className="AppFormGroup">
+              <button className="AppStopButton" type="button" onClick={handleStopClick}>
                 <StopIcon />
                 Stop
               </button>
-            </div></>
+            </div>}
+            </>
             ) : (
             <p><strong>No job in progress</strong></p>
         )}
