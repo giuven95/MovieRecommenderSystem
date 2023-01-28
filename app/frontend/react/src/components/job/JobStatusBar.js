@@ -4,6 +4,7 @@ import POLLING_DELAY_MS from '../../constants/POLLING_DELAY_MS';
 import STATUS_TO_STRING from '../../constants/STATUS_TO_STRING';
 import BACKEND_API_URL from "../../constants/BACKEND_API_URL";
 import StopIcon from '@mui/icons-material/Stop';
+import BeatLoader from "react-spinners/BeatLoader";
 
 const JobStatusBar = () => {
   const canSubmit = useStore(state => state.canSubmit);
@@ -42,13 +43,16 @@ const JobStatusBar = () => {
   return (
     <div className="JobStatusBar">
         {jobId ? (
-            <><p>
+            <>
+            <div className="AppGroup"><p>
                 <strong>Job ID: </strong>{jobId}
             </p>
             <p>
                 <strong>Status: </strong>{STATUS_TO_STRING[jobStatus]}
             </p>
-            {(canSubmit) ? "" : <div className="AppFormGroup">
+            {((jobStatus !== "DONE") && !canSubmit) ? <BeatLoader color="black" /> : <strong>The job is not running.</strong>}
+            </div>
+            {(canSubmit) ? "" : <div className="AppGroup">
               <button className="AppButton AppStopButton" type="button" onClick={handleStopClick}>
                 <StopIcon />
                 Stop

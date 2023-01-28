@@ -19,7 +19,7 @@
   padding-right: 150px;
 }
 
-.AppFormGroup {
+.AppFormGroup, .AppGroup {
   display: flex;
   flex-direction: column;
   padding: 10px;
