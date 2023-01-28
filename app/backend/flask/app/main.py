@@ -50,6 +50,8 @@ def get_job_response(job_id):
     job = Job.objects(job_id=job_id).first()
     if not job:
         return jsonify({"error": "Job not found"}), 404
+    if not job.response:
+        return jsonify({"error": "Response not ready"}), 404
     return jsonify({"response": job.response})
 
 
