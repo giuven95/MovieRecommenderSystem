@@ -3,6 +3,8 @@ An automatic movie recommendations system project
 
 ## Overview
 
+TODO
+
 ## Log
 * 2023/01/21 11:50 - Created the project
 * 2023/01/21 11:55 - Created section "Main approaches for creating recommender systems"
@@ -59,6 +61,8 @@ by users in order to predict additional items a new user might like. They do not
 
 #### Techniques
 
+TODO
+
 ### Content-based filtering
 
 Content-based recommender systems analyze item metadata, like movie names, movie descriptions and tags, and find
@@ -66,31 +70,47 @@ regularities in the content. They rely on the features of users and items for pr
 
 #### Techniques
 
+TODO
+
 ### Hybrid approaches
 
 Hybrid approaches combine content-based filtering techniques with those based on collaborative filtering. [[2]](#2)
 
 #### Techniques
 
+TODO
+
 ## Performance metrics
+
+TODO
 
 ## Project scope and approach
 
-## Prototypes and implementation
+TODO
+
+## Iterations
+
+TODO
 
 ## Technologies
 The following technologies were used for the project:
 
+TODO
+
 ## Datasets
 The following datasets were used for the project:
 
+TODO
+
 ## References
+
 
 <a id="1">[1]</a> 
 
 Xiaoyuan Su and Taghi M. Khoshgoftaar,
 "A Survey of Collaborative Filtering Techniques",
 https://downloads.hindawi.com/archive/2009/421425.pdf
+
 
 <a id="2">[2]</a> 
 
