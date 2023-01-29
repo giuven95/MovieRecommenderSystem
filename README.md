@@ -3,6 +3,8 @@ An automatic movie recommendations system project
 
 ## Overview
 
+This project was started for University of Messina course "Advanced Techniques for Data Analysis" from the Master's Degree in Engineering and Computer Science.
+
 TODO
 
 ## Log
