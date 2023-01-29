@@ -51,11 +51,11 @@ Recommendation is a different enough problem from classification and regression 
 
 * **Diversity should be taken into account**
 
-  TODO
+  Users can get better satisfaction when lists of recommended items are not monotonous, but rather diverse. [[4]](#4)
 
 * **Serendipity should be taken into account**
 
-  TODO
+  Users want to be surprised by item recommendations; they do not want them to be boring or predictable. [[5]](#5)
 
 * **Often, recommender systems cannot be fully offline**
 
@@ -260,9 +260,22 @@ Pages 4290-4311,
 ISSN 0020-0255,
 https://doi.org/10.1016/j.ins.2010.07.024.
 
+
 <a id="3">[3]</a> 
 
 Nitin Mishra et al 2021 J. Phys.: Conf. Ser. 1717 012002
+
+
+<a id="4">[4]</a> 
+
+Ziegler, C.N., McNee, S.M., Konstan, J.A. and Lausen, G. (2005).
+"Improving recommendation lists through topic diversification".
+Proceedings of the 14th international conference on World Wide Web. pp. 22–32.
+
+
+<a id="5">[5]</a> 
+
+Castells, Pablo; Hurley, Neil J.; Vargas, Saúl (2015). "Novelty and Diversity in Recommender Systems". In Ricci, Francesco; Rokach, Lior; Shapira, Bracha (eds.). Recommender Systems Handbook (2 ed.). Springer US. pp. 881–918. doi:10.1007/978-1-4899-7637-6_26. ISBN 978-1-4899-7637-6.
 
 
 ## Useful links
