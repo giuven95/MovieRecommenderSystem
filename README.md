@@ -19,6 +19,7 @@ TODO
 * 2023/02/21 20:30 - Added React, Flask, MongoDB, Docker Compose inside "app" folder
 * 2023/02/26 20:20 - Created job system (mockup)
 * 2023/02/29 15:00 - Finishing Iteration 0
+* 2023/02/29 17:20 - Problem formulation
 
 ## Problem formulation
 
@@ -34,11 +35,11 @@ in order to predict items that are more pertinent to a particular user.
 
 More formally, it is defined by:
 
-- C: the set of all users
+- $C$: the set of all users
 
-- S: the set of all possible items that can be recommended
+- $S$: the set of all possible items that can be recommended
 
-- U: a utility function U : C X S [[3]](#3)
+- $U$: a utility function $U : C \times S$ [[3]](#3)
 
 ### Peculiarities of the recommendation problem
 
