@@ -232,6 +232,30 @@ TODO
 ## Technologies
 The following technologies were used for the project:
 
+### Frontend
+
+- React
+
+- Zustand
+
+TODO
+
+### Backend
+
+- Flask
+
+- Redis
+
+- MongoDB
+
+TODO
+
+### Machine learning
+
+TODO
+
+### Deployment and infrastructure
+
 TODO
 
 ## Datasets
