@@ -22,7 +22,23 @@ TODO
 
 ## Problem formulation
 
-TODO
+Recommendation systems are a subclass of information filtering systems.
+
+A recommender system uses:
+
+- a dataset of items, like videos, songs, books, movies, items of clothing, e-commerce products etc. 
+
+- a dataset of user interactions (e.g. reads, likes, buys) with some or all of those items
+
+in order to predict items that are more pertinent to a particular user.
+
+More formally, it is defined by:
+
+- C: the set of all users
+
+- S: the set of all possible items that can be recommended
+
+- U: a utility function U : C X S [[3]](#3)
 
 ### Peculiarities of the recommendation problem
 
@@ -242,6 +258,10 @@ Volume 180, Issue 22,
 Pages 4290-4311,
 ISSN 0020-0255,
 https://doi.org/10.1016/j.ins.2010.07.024.
+
+<a id="2">[3]</a> 
+
+Nitin Mishra et al 2021 J. Phys.: Conf. Ser. 1717 012002
 
 
 ## Useful links
