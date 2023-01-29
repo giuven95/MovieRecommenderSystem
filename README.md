@@ -236,6 +236,8 @@ The following technologies were used for the project:
 
 - React
 
+- CSS
+
 - Zustand
 
 TODO
@@ -246,6 +248,8 @@ TODO
 
 - Redis
 
+- rq, a Python package for Redis queues
+
 - MongoDB
 
 TODO
@@ -254,7 +258,11 @@ TODO
 
 TODO
 
-### Deployment and infrastructure
+### Containerization, deployment and infrastructure
+
+- Docker
+
+- Docker Compose
 
 TODO
 
