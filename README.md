@@ -18,6 +18,7 @@ TODO
 * 2023/02/21 14:40 - Added more sections
 * 2023/02/21 20:30 - Added React, Flask, MongoDB, Docker Compose inside "app" folder
 * 2023/02/26 20:20 - Created job system (mockup)
+* 2023/02/29 15:00 - Finishing Iteration 0
 
 ## Problem formulation
 
@@ -91,6 +92,123 @@ TODO
 TODO
 
 ## Iterations
+
+### Iteration 0
+
+Iteration 0 is comprised of a mock frontend written in React and a mock REST API written in Python using the Flask framework.
+
+It is meant as a rough first draft to serve as the template for the web app project.
+
+It does not contain an actual Machine Learning model, nor does it contain any data scraper.
+
+Job requests are received from a form in the frontend which accepts a Letterboxd profile name to be scraped.
+
+```jsx
+<div className="Home AppPage">
+  <h2>Find movies you will like!</h2>
+  <div className="AppContainer">
+    <form className="AppForm" onSubmit={handleSubmit(onSubmit)}>
+      <div className="AppFormGroup">
+        <label htmlFor="name">
+          Insert your Letterboxd profile name:
+        </label>
+        <input
+          type="text"
+          {...register("name")}
+        />
+      </div>
+      {canSubmit? <div className="AppFormGroup">
+        <button className="AppButton" type="submit">
+          <PlayArrowIcon />
+          Submit
+        </button>
+      </div> : ""}
+    </form>
+  </div>
+  {jobStatus === null ? "" : <>
+    <h3>Job status</h3>
+    <div className="AppContainer">
+      <JobStatusBar />
+    </div>
+  </>}
+  {(jobResponse === null || jobResponse.length === 0) ? "" : <>
+    <h3>Check out your results</h3>
+    <div className="AppContainer">
+      <ResponseSection />
+    </div>
+  </>}
+</div>
+```
+
+An unique job ID is created in the corresponding Flask endpoint, and it is sent back to the frontend.
+
+Jobs are stored in a MongoDB collection.
+
+```python
+@app.route(API_PREFIX + "/request", methods=["POST"])
+def post_request():
+    my_mongo_connect()
+    data = request.get_json()
+    if "name" not in data:
+        return jsonify({"error": "Missing field name in request body"}), 400
+    profile_name = data["name"]
+    job_id = str(uuid.uuid4())
+    job_doc = Job(job_id=job_id, profile_name=profile_name, status=JOB_STATUSES[0], response=[])
+    job_doc.save()
+    q.enqueue(process_job, {"id": job_id, "profile_name": profile_name})
+    return jsonify({"id": job_id})
+```
+
+Jobs are passed to workers through a Redis queue for asynchronous execution. A worker script, also written in Python, pretends to process the job request going through different phases.
+
+```python
+def process_job(job):
+    my_mongo_connect()
+    for i, job_status in enumerate(JOB_STATUSES):
+        job_doc = Job.objects(job_id=job['id']).first()
+        if job_doc.stopped: return
+        if i == 0: continue
+        job_doc.status = job_status
+        if i == len(JOB_STATUSES) - 1: 
+            job_doc.response = [Suggestion(name=movie['name'], score=movie['score']) for movie in DEFAULT_SUGGESTIONS]
+        job_doc.save()
+        time.sleep(MOCK_WAIT)
+```
+
+The web page polls a job status endpoint every few seconds, notifying the user of any updates. When the job status is set to "DONE", a job response endpoint is queried and the mock suggestions are downloaded in order to display them.
+
+```jsx
+  useEffect(() => {
+    let intervalId = null;
+
+    if (jobStatus === "DONE" && jobResponse === null) {
+      intervalId = setInterval(() => {
+        fetch(BACKEND_API_URL + `/response/${jobId}`)
+          .then((res) => res.json())
+          .then((data) => {console.log(data); setJobResponse(data.response)})
+          .catch((error) => console.error(error));
+      }, POLLING_DELAY_MS);
+    }
+
+    return () => clearInterval(intervalId);
+  }, [jobId, jobStatus, jobResponse]);
+
+  useEffect(() => {
+    let intervalId = null;
+
+    if (jobId) {
+      intervalId = setInterval(() => {
+        fetch(BACKEND_API_URL + `/status/${jobId}`)
+          .then((res) => res.json())
+          .then((data) => setJobStatus(data.status))
+          .catch((error) => console.error(error));
+      }, POLLING_DELAY_MS);
+    }
+
+    return () => clearInterval(intervalId);
+  }, [jobId]);
+
+```
 
 TODO
 
