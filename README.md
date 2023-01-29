@@ -81,7 +81,21 @@ by users in order to predict additional items a new user might like. They do not
 
 #### Techniques
 
-TODO
+##### Memory-based
+
+- Neighbor-based
+
+- Top-N
+
+##### Model-based
+
+- Bayesian belief nets
+
+- Clustering
+
+- Dimensionality reduction
+
+- Sparse factor analysis
 
 ### Content-based filtering
 
