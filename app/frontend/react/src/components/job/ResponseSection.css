@@ -1,0 +1,13 @@
+.ResponseName {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ResponseItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border: 2px #444 dotted;
+    margin: 12px;
+}

@@ -8,12 +8,12 @@ const useStore = create(
       jobId: null,
       canSubmit: true,
       jobStatus: null,
-      response: null,
+      jobResponse: null,
       startJob: (id) =>
         set(produce(draft => {
             draft.jobId = id;
             draft.jobStatus = "UNKNOWN";
-            draft.response = null;
+            draft.jobResponse = null;
             draft.canSubmit = false;
         })),
       stopJob: (id) =>
@@ -25,9 +25,9 @@ const useStore = create(
             if (status === "DONE") draft.canSubmit = true;
             draft.jobStatus = status;
         })),
-      setResponse: (response) =>
+      setJobResponse: (response) =>
         set(produce(draft => {
-            draft.response = response;
+            draft.jobResponse = response;
         })),
     }),
     {

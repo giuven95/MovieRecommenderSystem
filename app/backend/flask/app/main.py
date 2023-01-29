@@ -52,7 +52,8 @@ def get_job_response(job_id):
         return jsonify({"error": "Job not found"}), 404
     if not job.response:
         return jsonify({"error": "Response not ready"}), 404
-    return jsonify({"response": job.response})
+    response_data = [sugg.to_mongo() for sugg in job.response]
+    return jsonify({"response": response_data})
 
 
 @app.route(API_PREFIX + "/stop/<job_id>", methods=["POST"])
