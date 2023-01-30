@@ -57,6 +57,8 @@ Recommendation is a different enough problem from classification and regression 
 
   Users want to be surprised by item recommendations; they do not want them to be boring or predictable. [[5]](#5)
 
+  As an example, recommending to a user a movie directed by his favorite director is generally not considered a serendipitous recommendation. The user would have likely discovered that movie on its own. [[6]](#6)
+
 * **Often, recommender systems cannot be fully offline**
 
   TODO
@@ -83,19 +85,25 @@ by users in order to predict additional items a new user might like. They do not
 
 ##### Memory-based
 
-- Neighbor-based
+- **Neighbor-based**
 
-- Top-N
+Neighborhood-based techniques can be described as automating the concept of *word of mouth*. Generally they are very simple to implement; in the least sophisticated case, only one hyperparameter is present (the number of neighbors chosen). They also have good explainability and require no costly training phase. [[6]](#6)
+
+- **Top-N**
 
 ##### Model-based
 
-- Bayesian belief nets
+- **Bayesian belief nets**
 
-- Clustering
+- **Clustering**
 
-- Dimensionality reduction
+- **Singular value decomposition (SVD)**
 
-- Sparse factor analysis
+- **Principal component analysis (PCA)**
+
+- **Sparse factor analysis**
+
+- **Neural networks**
 
 ### Content-based filtering
 
@@ -241,6 +249,46 @@ The web page polls a job status endpoint every few seconds, notifying the user o
 
 ```
 
+### Iteration 1
+
+In Iteration 1 two important elements are attached to the backend of the previously created demo:
+- a Machine Learning model;
+- a ratings scraper for the Letterboxd profile name input.
+
+#### Exploratory phase
+
+This iteration requires the beginning of an exploratory phase in order to compare different techniques.
+
+Jupyter Notebooks are used in order to quickly get a feel for the data.
+
+Here is a high level template of the preliminary steps:
+
+```python
+# Import necessary libraries
+
+# Download the dataset from Kaggle
+
+# Load the dataset into a Pandas dataframe
+
+# Visualize, clean and preprocess the data
+
+# Create the utility matrix
+```
+
+The first technique tested is neighbourhood-based collaborative filtering.
+
+Here is a high level template of the required steps:
+
+
+```python
+# Create function to calculate similarity between users
+
+# Create a neighborhood-based recommender
+
+# Test the recommender
+
+```
+
 TODO
 
 ## Technologies
@@ -321,7 +369,20 @@ Proceedings of the 14th international conference on World Wide Web. pp. 22–32.
 
 <a id="5">[5]</a> 
 
-Castells, Pablo; Hurley, Neil J.; Vargas, Saúl (2015). "Novelty and Diversity in Recommender Systems". In Ricci, Francesco; Rokach, Lior; Shapira, Bracha (eds.). Recommender Systems Handbook (2 ed.). Springer US. pp. 881–918. doi:10.1007/978-1-4899-7637-6_26. ISBN 978-1-4899-7637-6.
+Castells, Pablo; Hurley, Neil J.; Vargas, Saúl (2015).
+"Novelty and Diversity in Recommender Systems". 
+In Ricci, Francesco; Rokach, Lior; Shapira, Bracha (eds.).
+Recommender Systems Handbook (2 ed.). 
+Springer US. pp. 881–918. doi:10.1007/978-1-4899-7637-6_26.
+ISBN 978-1-4899-7637-6.
+
+<a id="6">[6]</a> 
+
+Christian Desrosiers and George Karypis
+"A Comprehensive Survey of
+Neighborhood-based Recommendation Methods"
+https://www.inf.unibz.it/~ricci/ISR/papers/handbook-neighbor.pdf
+
 
 
 ## Useful links
