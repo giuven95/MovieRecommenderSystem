@@ -12,14 +12,15 @@ TODO
 * 2023/01/21 11:55 - Created section "Main approaches for creating recommender systems"
 * 2023/01/21 12:15 - Created sections "Technologies" and "Datasets"
 * 2023/01/21 12:20 - Created section "References"
-* 2023/02/21 12:50 - Created section "Useful links"
-* 2023/02/21 13:20 - Created section "Problem formulation"
-* 2023/02/21 13:50 - Added more sections
-* 2023/02/21 14:40 - Added more sections
-* 2023/02/21 20:30 - Added React, Flask, MongoDB, Docker Compose inside "app" folder
-* 2023/02/26 20:20 - Created job system (mockup)
-* 2023/02/29 15:00 - Finishing Iteration 0
-* 2023/02/29 17:20 - Problem formulation
+* 2023/01/21 12:50 - Created section "Useful links"
+* 2023/01/21 13:20 - Created section "Problem formulation"
+* 2023/01/21 13:50 - Added more sections
+* 2023/01/21 14:40 - Added more sections
+* 2023/01/21 20:30 - Added React, Flask, MongoDB, Docker Compose inside "app" folder
+* 2023/01/26 20:20 - Created job system (mockup)
+* 2023/01/29 15:00 - Finishing Iteration 0
+* 2023/01/29 17:20 - Problem formulation
+* 2023/01/31 18:45 - Uploaded first notebook
 
 ## Problem formulation
 
@@ -87,7 +88,7 @@ by users in order to predict additional items a new user might like. They do not
 
 - **Neighbor-based**
 
-Neighborhood-based techniques can be described as automating the concept of *word of mouth*. Generally they are very simple to implement; in the least sophisticated case, only one hyperparameter is present (the number of neighbors chosen). They also have good explainability and require no costly training phase. [[6]](#6)
+Neighborhood-based techniques can be described as automating the concept of *word of mouth*. Generally they are very simple to implement; in the least sophisticated case, only one hyperparameter is present (the number of neighbors chosen). They also have good explainability and require no training phase. [[6]](#6)
 
 - **Top-N**
 
@@ -271,9 +272,13 @@ Here is a high level template of the preliminary steps:
 # Load the dataset into a Pandas dataframe
 
 # Visualize, clean and preprocess the data
-
-# Create the utility matrix
 ```
+
+Before starting, it is necessary to download the Kaggle API Token following this guide:
+
+https://www.kaggle.com/general/74235
+
+
 
 The first technique tested is neighbourhood-based collaborative filtering.
 
