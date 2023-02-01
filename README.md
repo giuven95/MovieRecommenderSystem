@@ -413,3 +413,5 @@ https://www.inf.unibz.it/~ricci/ISR/papers/handbook-neighbor.pdf
 * [Letterboxd movie recommendations project, GitHub repo by Sam Learner](https://github.com/sdl60660/letterboxd_recommendations)
 
 * [List of movies every hacker should watch, GitHub repo by k4m4](https://github.com/k4m4/movies-for-hackers)
+
+* [Recommender Systems with Python — Part III: Collaborative Filtering (Singular Value Decomposition)](https://heartbeat.comet.ml/recommender-systems-with-python-part-iii-collaborative-filtering-singular-value-decomposition-5b5dcb3f242b)
