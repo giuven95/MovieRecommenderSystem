@@ -21,6 +21,7 @@ TODO
 * 2023/01/29 15:00 - Finishing Iteration 0
 * 2023/01/29 17:20 - Problem formulation
 * 2023/01/31 18:45 - Uploaded first notebook
+* 2023/01/31 10:00 - Created first local notebook, because of Google Colab limitations, in order to train and test a neural network
 
 ## Problem formulation
 
